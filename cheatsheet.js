@@ -131,3 +131,6 @@ function nthSmallest(arr01, pos){
     const sol = arr.sort((a, b) => a - b)
       return(sol[pos - 1])
   }
+
+// My head is at the wrong end!
+console.log(arr.reverse(arr))
