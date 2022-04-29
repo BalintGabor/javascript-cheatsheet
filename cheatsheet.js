@@ -95,3 +95,39 @@ class SmallestIntegerFinder {
 Afterbegin elementen belül de a kezdőtag után
 Beforeend elementen belül de a végső tag előtt
 Afterend elementen kívül és utána*/
+
+let protagonist = {
+    "actorName": "Noomi Rapace", // nem lenne szükséges az actorName-t idézőjelbe tenni (csak a .js kiterjesztéseknél, ha .jason akkor viszont igen) az a kulcsérték a : után pedig az érték következik
+    "characterName": "Elizabeth Shaw"
+}
+
+// console.log(az adott elérési útvonal.length) - kiírja az összes érték számát
+// console.log(typeof az adott elérési útvonal.length) - kiírja, hogy számról van-e szó, ha number
+// for (let index = 0; index < elérési útvonal.length; index++) {console.log(elérési útvonal[index].name)} - kilistázza az összeset
+// for (const vmi of elérési útvonala a tömbnek) {console.log (vmi.name)} - ugyanaz mint feljebb
+// for (const vmiIndex in elérési útvonal) {console.log(elérési útvonal[vmiIndex].name)}
+
+let queue = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]
+
+console.log(queue.indexOf("wolf"))
+console.log(queue.length -1)
+function warnTheSheep(queue) {
+    let w = queue.indexOf("wolf");
+    let q = queue.length -1;
+    let n = q - w
+    if (q === w) {
+        return "Pls go away and stop eating my sheep"
+    } else {
+        return ("Oi! Sheep number " + n +"! You are about to be eaten by a wolf!")
+    }
+}
+console.log(warnTheSheep(queue));
+
+
+//Nth Smallest Element
+let arr01 = [-5,-1,-6,-18]
+let pos = 4
+function nthSmallest(arr01, pos){
+    const sol = arr.sort((a, b) => a - b)
+      return(sol[pos - 1])
+  }
