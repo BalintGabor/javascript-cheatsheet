@@ -134,3 +134,11 @@ function nthSmallest(arr01, pos){
 
 // My head is at the wrong end!
 console.log(arr.reverse(arr))
+
+// return Object.entries(results) - My Languages
+//   Filterezzünk értékek alapján
+    .filter(([key, value]) => value >= 60)
+//   Sortoljuk csökkenő sorrendben értékek alapján
+    .sort((a, b) => b[1] - a[1])
+//   Kiszedjük a kulcsokat
+    .map(([key, value]) => key);
