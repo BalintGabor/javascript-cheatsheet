@@ -142,3 +142,14 @@ console.log(arr.reverse(arr))
     .sort((a, b) => b[1] - a[1])
 //   Kiszedjük a kulcsokat
     .map(([key, value]) => key);
+
+// Change two-dimensional array
+function matrix(array) {
+    for (let index = 0; index < array.length; index++) {
+        const n = index;
+        if (array[n][n] < 0) {
+            array[n].splice(n, 1, 0)}
+            else {array[n].splice(n, 1, 1)};
+    }
+    return (array)
+}
