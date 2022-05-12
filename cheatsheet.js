@@ -153,3 +153,84 @@ function matrix(array) {
     }
     return (array)
 }
+
+//count true-s in an array
+function countSheeps(arrayOfSheep) {
+    let sum = 0;
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+      if (arrayOfSheep[i]===true) {
+        sum += 1;
+      }
+    }
+    return sum  
+  }
+// egyszerűbb verzió:
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+  } //boolean = true
+
+// Feladat n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+function isDivisible(n, x, y) {
+    if (n % x != 0) {
+      return false;
+    } else if (n % y != 0) {
+        return false;
+    } else {
+        return true;
+    }
+  }
+// century
+function century(year) {
+    return (year + 99) / 100 | 0; //levágja a tizedeket
+  }
+
+// monogram
+function abbrevName(name){
+
+    var nameArray = name.split(" "); // szétszedi két stringgé, namearray0 ás namearray1-é
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+  }
+
+  // 348597 => [7,9,5,8,4,3]
+
+  function digitize(n) {
+    var arr = String(n).split("").reverse().map(Number);
+    return arr
+  }
+
+// find the word 'neede' in an array
+function findNeedle(array) {
+    for (var i=0; i<array.length; i++){
+      if (array[i] === 'needle')
+        return 'found the needle at position ' + i;
+    }
+}
+
+//[1, 2, 3] --> [2, 4, 6]
+function maps(x){
+    return x.map(n => n * 2);
+  }
+
+//[1,-2,3,-4,5] -> [-1,2,-3,4,-5]); [0] ->[-0]
+function invert(array) {
+    return array.map(n => -n);
+}
+
+// hello world! -> world! hello
+function reverseWords(str){
+    return str.split(' ').reverse().join(' ');
+  }
+
+//[101, 45, 75, 105, 99, 107], 107), true); ['what', 'a', 'great', 'kata'], 'kat'), false);
+function check(a, x) {
+    if (a.includes(x)) {
+      return true;
+      } else {
+        return false
+      }
+}
+
+// array-ek összevonása
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys); //= Cecilie,Lone,Emil,Tobias,Linus
